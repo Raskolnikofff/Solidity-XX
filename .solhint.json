@@ -1,0 +1,10 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "func-visibility": ["warn", { "ignoreConstructors": true }],
+    "private-vars-leading-underscore": ["warn", { "strict": false }],
+    "named-parameters-mapping": "warn",
+    "comprehensive-interface": "warn",
+    "func-named-parameters": ["warn", 4]
+  }
+}
