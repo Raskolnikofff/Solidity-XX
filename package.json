@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "compile": "yarn lint:contracts; hardhat compile",
+    "test": "yarn lint:tests; yarn lint:scripts; hardhat test",
+    "lint:contracts": "prettier --write contracts/**/*.sol; hardhat check;",
+    "lint:tests": "prettier --write test/**/*.ts; eslint test/**/*.ts;",
+    "lint:scripts": "prettier --write deploy/**/*.ts; eslint deploy/**/*.ts; prettier --write scripts/**/*.ts;  eslint scripts/**/*.ts;",
+    "lint": "yarn lint:contracts; yarn lint:tests; yarn lint:scripts"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
